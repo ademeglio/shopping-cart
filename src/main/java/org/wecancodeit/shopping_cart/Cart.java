@@ -64,10 +64,10 @@ public class Cart {
 	// traverse and show contents of the cart
 	public void showOrder() {
 		for (Item item : orders) {
-			System.out.println("ITEM: " + item.getItemName() 
-					+ " UNIT PRICE:" + item.getItemPrice()
-					+ " QUANTITY: " + item.getItemQty()
-					+ " EXTENDED PRICE: " + getUnitExtendedPrice(item) );
+			System.out.println("<ITEM> " + item.getItemName() 
+					+ " <UNIT PRICE> $" + item.getItemPrice()
+					+ " <QTY> " + item.getItemQty()
+					+ " <SUBTOTAL> " + getUnitExtendedPrice(item) );
 		}
 	}
 }

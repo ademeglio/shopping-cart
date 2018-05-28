@@ -30,6 +30,7 @@ public class ShopApp {
 			// display current cart contents
 			System.out.println("Current Cart:");
 			userCart.showOrder();
+			System.out.println("Total Price: " + userCart.getTotalItems());
 			
 			// continue or end purchasing loop
 			System.out.println("\nContinue Shopping (y/n)?");
@@ -46,7 +47,7 @@ public class ShopApp {
 		// TODO Option to remove items from cart
 		
 		
-
+		userInput.close();
 	}
 
 }
