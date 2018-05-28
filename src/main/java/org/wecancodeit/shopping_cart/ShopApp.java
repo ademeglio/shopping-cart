@@ -17,7 +17,7 @@ public class ShopApp {
 			System.out.println("Enter the name of the item: ");
 			String itemName = userInput.next();
 			
-			System.out.println("Enter the unit pric: ");
+			System.out.println("Enter the unit price: ");
 			double itemUnitPrice = userInput.nextDouble();
 			
 			System.out.println("Enter quantity to purchase: ");
@@ -30,7 +30,7 @@ public class ShopApp {
 			// display current cart contents
 			System.out.println("Current Cart:");
 			userCart.showOrder();
-			System.out.println("Total Price: " + userCart.getTotalItems());
+			System.out.println("CART TOTAL: " + userCart.getTotalCost());
 			
 			// continue or end purchasing loop
 			System.out.println("\nContinue Shopping (y/n)?");

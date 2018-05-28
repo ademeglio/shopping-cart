@@ -39,7 +39,7 @@ public class Cart {
 		double cartTotalCharge = 0;
 		
 		for (Item item : orders) {
-			cartTotalCharge += item.getItemPrice() * item.getItemQty();
+			cartTotalCharge += (item.getItemPrice() * item.getItemQty());
 		}
 		
 		BigDecimal amount = new BigDecimal(cartTotalCharge);
