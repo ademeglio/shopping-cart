@@ -4,6 +4,18 @@ import java.util.Scanner;
 
 public class ShopApp {
 
+	/*
+	 * WeCanCodeIT Module Project 2
+	 * by Anthony J. DeMeglio
+	 * 5/28/2018
+	 * 
+	 * Shopping Cart App
+	 * ShopApp()
+	 * Cart()
+	 * Item()
+	 * 
+	 */
+	
 	public static void main(String[] args) {
 		
 		boolean isDonePurchasing = false;
