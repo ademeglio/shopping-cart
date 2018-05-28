@@ -1,9 +1,9 @@
 # Creating a Shopping Cart using the ArrayList class
 
-## The Item Class
+### The Item Class
 Create an **Item** class that models an Item to be purchased. It should contain instance data and a constructor to hold the following characteristics: name, price and quantity. Item class should also include accessor methods for the 3 characteristics and a toString summary.
 
-## The ShopApp Class
+### The ShopApp Class
 Create an `ArrayList` to hold `Item` instances. Call your `ArrayList` `items`. Here is an example of an `ArrayList` declaration that holds `String` instances:
 
 ```java
