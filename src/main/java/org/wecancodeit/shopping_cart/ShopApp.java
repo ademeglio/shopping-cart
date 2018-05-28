@@ -11,7 +11,7 @@ public class ShopApp {
 		Cart userCart = new Cart();
 		String response = "";
 		
-		// Create Items() and add to Cart()
+// Purchasing Loop
 		while (!isDonePurchasing) {
 			// create item being purchases: name, price, qty
 			System.out.println("Enter the name of the item: ");
@@ -28,9 +28,7 @@ public class ShopApp {
 			userInput.nextLine(); // stop input until next input request.
 			
 			// display current cart contents
-			System.out.println("Current Cart:");
-			userCart.showOrder();
-			System.out.println("CART TOTAL: " + userCart.getTotalCost());
+			CurrentCart(userCart);
 			
 			// continue or end purchasing loop
 			System.out.println("\nContinue Shopping (y/n)?");
@@ -41,13 +39,33 @@ public class ShopApp {
 			
 		} // end purchasing loop
 		
+// Option to remove items from cart loop
+		// reset variables
+		isDonePurchasing = false;
+		response = "";
 		
+		while (!isDonePurchasing) {
+						
+			System.out.println("Do you want to remove anything from the cart?");
+			response = userInput.nextLine();
+			if (response.toLowerCase().equals("y") || response.toLowerCase().equals("yes")) {
+				System.out.println("What do you want to remove?");
+				response = userInput.nextLine();
+				userCart.removeItem(response);
+			} else if (response.toLowerCase().equals("n") || response.toLowerCase().equals("no")) {
+				isDonePurchasing = true;
+			}
+			
+			CurrentCart(userCart);
+		}
 
-		
-		// TODO Option to remove items from cart
-		
-		
 		userInput.close();
+		System.out.println("\nProceeding to checkout...\nShopApp-fin!");
 	}
 
+	public static void CurrentCart(Cart userCart) {
+		System.out.println("Current Cart:");
+		userCart.showOrder();
+		System.out.println("CART TOTAL: " + userCart.getTotalCost());
+	}
 }
